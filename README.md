@@ -19,9 +19,13 @@ These macros cover:
 
 All files are stored as plain-text .bas modules that import directly into Excel's VBA editor.
 
+---
+
 ## What Are .bas Files?
 
 .bas files are VBA code modules exported from Excel. They contain reusable procedures (macros) you can import into other Excel workbooks. Each .bas file in this repo corresponds to a specific macro or functional category (e.g., exports, utilities).
+
+---
 
 ## How to Download Macros from GitHub
 
@@ -40,6 +44,8 @@ You can download and use the macros in this repository in two ways:
 2. Click the **Raw** button to view the plain text.
 3. Right-click the page and select "Save As...".
 4. Make sure the file is saved with a .bas extension (e.g., `ExportPivotToMarkdown.bas`).
+
+---
 
 ## How to Enable the Developer Tab in Excel
 
@@ -65,6 +71,8 @@ Before you can use or import macros, the Developer tab must be visible in the Ex
 
 You will now see the Developer tab in the ribbon, which gives access to the VBA editor, macro tools, and import options.
 
+---
+
 ## How to Use These in Excel
 
 ### Step-by-Step: Importing a .bas File
@@ -80,12 +88,16 @@ You will now see the Developer tab in the ribbon, which gives access to the VBA 
 
 **Tip:** You can import and use multiple macros in the same workbook. For ones you use often, consider adding them to your Personal Macro Workbook (PERSONAL.XLSB) so they're available in all Excel files.
 
+---
+
 ## Requirements
 
 - Microsoft Excel (Windows or Mac)
 - Macro-enabled workbook format (.xlsm)
 - Macros must be enabled in Excel (click "Enable Content" if prompted)
 - Excel 2016 or later recommended
+
+---
 
 ## Repository Structure
 
@@ -108,6 +120,8 @@ excel-vba-toolkit/
 │   └── GetHyperlinkURL.bas
 └── README.md
 ```
+
+---
 
 ## Macro Descriptions
 
@@ -158,6 +172,8 @@ Documents all Excel Tables across every worksheet in the workbook. Includes data
 #### GetHyperlinkURL.bas
 
 Custom Excel function that extracts the actual URL from hyperlinked cells. Use it as `=GetHyperlinkURL(A1)` to pull hyperlink addresses for link inventories, validation, or export lists. Includes error handling for non-hyperlinked cells and multiple cell selections.
+
+---
 
 ## License
 
