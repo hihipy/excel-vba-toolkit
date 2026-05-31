@@ -1,5 +1,13 @@
 # excel-vba-toolkit
 
+[![Link Check](https://github.com/hihipy/excel-vba-toolkit/actions/workflows/links.yml/badge.svg)](https://github.com/hihipy/excel-vba-toolkit/actions/workflows/links.yml)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+**Built with**
+
+[![VBA](https://img.shields.io/badge/VBA-5E5E5E?style=flat&logoColor=white)](https://learn.microsoft.com/office/vba/api/overview/)
+[![Microsoft Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/microsoft-365/excel)
+
 A collection of Excel VBA macros, organized as .bas code modules for easy reuse and import into any Excel workbook.
 
 These macros cover:
