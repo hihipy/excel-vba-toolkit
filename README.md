@@ -8,35 +8,38 @@
 [![VBA](https://img.shields.io/badge/VBA-5E5E5E?style=flat&logoColor=white)](https://learn.microsoft.com/office/vba/api/overview/)
 [![Microsoft Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/microsoft-365/excel)
 
-A collection of Excel VBA macros, organized as .bas code modules for easy reuse and import into any Excel workbook.
+A collection of Excel VBA macros, organized as .bas code modules so you can reuse them and import them into any Excel workbook.
 
 These macros cover:
+
 - Data cleaning and transformation
-- Smart exports (CSV, Markdown) with advanced formatting
+- Exports (CSV, Markdown) with detailed formatting
 - Documentation of PivotTables and Excel Tables
 - Utility functions for hyperlink extraction and data manipulation
 
-All files are stored as plain-text .bas modules, which can be imported directly into Excel's VBA editor.
+All files are stored as plain-text .bas modules that import directly into Excel's VBA editor.
 
 ## What Are .bas Files?
 
-.bas files are VBA code modules exported from Excel. They contain reusable procedures (macros) that can be imported into other Excel workbooks. Each .bas file in this repo corresponds to a specific macro or functional category (e.g., exports, utilities).
+.bas files are VBA code modules exported from Excel. They contain reusable procedures (macros) you can import into other Excel workbooks. Each .bas file in this repo corresponds to a specific macro or functional category (e.g., exports, utilities).
 
 ## How to Download Macros from GitHub
 
 You can download and use the macros in this repository in two ways:
 
 ### Option 1: Download the Entire Toolkit
+
 1. Click the green **Code** button at the top of this page.
 2. Select "Download ZIP".
 3. Once downloaded, unzip the file on your computer.
 4. Inside the unzipped folder, you'll find organized folders such as `data-cleaning`, `exports`, and `utilities`, each containing .bas files.
 
 ### Option 2: Download an Individual Macro
+
 1. Click on the .bas file you want.
 2. Click the **Raw** button to view the plain text.
 3. Right-click the page and select "Save As...".
-4. Ensure the file is saved with a .bas extension (e.g., `ExportPivotToMarkdown.bas`).
+4. Make sure the file is saved with a .bas extension (e.g., `ExportPivotToMarkdown.bas`).
 
 ## How to Enable the Developer Tab in Excel
 
@@ -45,6 +48,7 @@ Before you can use or import macros, the Developer tab must be visible in the Ex
 ### Enabling Developer Tab (Windows & Mac)
 
 **On Windows:**
+
 1. Open Excel.
 2. Go to **File > Options**.
 3. In the left pane, click **Customize Ribbon**.
@@ -52,6 +56,7 @@ Before you can use or import macros, the Developer tab must be visible in the Ex
 5. Click **OK**.
 
 **On Mac:**
+
 1. Open Excel.
 2. Go to **Excel > Preferences**.
 3. Select **Ribbon & Toolbar**.
@@ -73,18 +78,18 @@ You will now see the Developer tab in the ribbon, which gives access to the VBA 
 7. Press `Alt + Q` to return to Excel.
 8. Press `Alt + F8`, select the macro, and click **Run**.
 
-**Tip:** You can import and use multiple macros in the same workbook. For frequently used macros, consider adding them to your Personal Macro Workbook (PERSONAL.XLSB) to make them available in all Excel files.
+**Tip:** You can import and use multiple macros in the same workbook. For ones you use often, consider adding them to your Personal Macro Workbook (PERSONAL.XLSB) so they're available in all Excel files.
 
 ## Requirements
 
 - Microsoft Excel (Windows or Mac)
 - Macro-enabled workbook format (.xlsm)
 - Macros must be enabled in Excel (click "Enable Content" if prompted)
-- For optimal performance: Excel 2016 or later recommended
+- Excel 2016 or later recommended
 
 ## Repository Structure
 
-Each folder groups macros by category. Below is the current structure:
+Each folder groups macros by category. Here is the current structure:
 
 ```
 excel-vba-toolkit/
@@ -106,53 +111,65 @@ excel-vba-toolkit/
 
 ## Macro Descriptions
 
-Summaries of what each .bas file in the toolkit does:
+What each .bas file in the toolkit does:
 
 ### Data Cleaning
 
 #### DeleteHiddenRows.bas
-Deletes all hidden rows in the active worksheet using a bottom-up approach. Features real-time progress tracking, execution time reporting, and optimized performance for large datasets (50,000+ rows). Useful for cleaning filtered data before analysis or export.
+
+Deletes all hidden rows in the active worksheet using a bottom-up approach. Tracks progress in real time, reports execution time, and is tuned for large datasets (50,000+ rows). Useful for cleaning filtered data before analysis or export.
 
 #### FillBlanksDown.bas
-Fills blank cells in a selected range with values from the cell directly above. Handles merged cells gracefully and provides detailed feedback on cells modified. Useful for cleaning pivot table exports or grouped data where labels are omitted in repeated rows.
+
+Fills blank cells in a selected range with the value from the cell directly above. Handles merged cells cleanly and reports on the number of cells modified. Useful for cleaning pivot table exports or grouped data where labels are omitted in repeated rows.
 
 #### WhitespaceTools.bas
-High-performance toolkit for detecting and fixing whitespace issues across entire workbooks. Uses single-pass processing that detects and highlights leading, trailing, and multiple internal spaces in one operation. Automatically processes all sheets with optimized performance through memory optimization and bulk operations. Includes one-click workbook-wide cleaning with reporting. No selection required.
+
+Detects and fixes whitespace issues across an entire workbook. Uses single-pass processing to find and highlight leading, trailing, and repeated internal spaces in one operation, working through all sheets with bulk operations to stay fast on large files. Includes one-click workbook-wide cleaning with a report, and no selection is required.
 
 ### Exports & Documentation
 
 #### DocumentFormulas.bas
-Documents all formulas on any Excel worksheet and exports them as a structured JSON file. Works with any sheet layout — no Excel Tables required. Includes formula categorization, business intent detection, dependency mapping, error analysis, and optimization hints. Designed for feeding into AI tools for formula review, documentation, and troubleshooting.
+
+Documents all formulas on any Excel worksheet and exports them as a structured JSON file. Works with any sheet layout, no Excel Tables required. Includes formula categorization, business-intent detection, dependency mapping, error analysis, and optimization hints. Designed for feeding into AI tools for formula review, documentation, and troubleshooting.
 
 #### DocumentTableFormulas.bas
+
 Scans all Excel Tables (ListObjects) in a workbook and documents their column formulas in a Markdown file. Records formula text, formula category, and cross-table references for each column. Useful for auditing formula logic or generating technical documentation for structured data models.
 
 #### ExportPivotToMarkdown.bas
-Exports the first PivotTable on the active worksheet to GitHub-compatible Markdown format. Preserves table structure with proper pipe delimiters and escapes special characters. Useful for documentation, reports, or sharing pivot analysis in markdown-friendly platforms.
+
+Exports the first PivotTable on the active worksheet to GitHub-compatible Markdown. Preserves table structure with proper pipe delimiters and escapes special characters. Useful for documentation, reports, or sharing pivot analysis on markdown-friendly platforms.
 
 #### ExportRangeToCSV.bas
-CSV export tool with intelligent data type detection, configurable text quoting, and buffered writing for performance. Handles 50,000+ rows efficiently while preserving data integrity. Supports custom delimiters and provides detailed export statistics.
+
+CSV export tool with data type detection, configurable text quoting, and buffered writing for speed. Handles 50,000+ rows while preserving data integrity. Supports custom delimiters and reports detailed export statistics.
 
 #### GenerateAdvancedPivotReport.bas
-Creates documentation for all PivotTables (both OLAP and regular) in a workbook. Includes field configurations, data sources, OLAP connection details, MDX references, calculated fields, and slicer information. Outputs Markdown reports with complete metadata analysis.
+
+Documents all PivotTables (both OLAP and regular) in a workbook. Includes field configurations, data sources, OLAP connection details, MDX references, calculated fields, and slicer information. Outputs Markdown reports with full metadata.
 
 #### GenerateTableDoc.bas
-Creates documentation of all Excel Tables across every worksheet in the workbook. Features data profiling with intelligent data type detection, sample values, formula transparency with exact syntax and dependency mapping, data quality assessment (CLEAN/WARNING/ERROR flags), and performance optimization guidance. Generates Markdown output compatible with any AI tool. Works with datasets from 100 to 100,000+ rows.
+
+Documents all Excel Tables across every worksheet in the workbook. Includes data profiling with type detection, sample values, formula transparency with exact syntax and dependency mapping, data quality flags (CLEAN/WARNING/ERROR), and performance guidance. Generates Markdown output compatible with any AI tool. Works with datasets from 100 to 100,000+ rows.
 
 ### Utilities
 
 #### GetHyperlinkURL.bas
-Custom Excel function that extracts the actual URL from hyperlinked cells. Use with `=GetHyperlinkURL(A1)` to retrieve hyperlink addresses for link inventories, validation, or export lists. Includes error handling for non-hyperlinked cells and multiple cell selections.
+
+Custom Excel function that extracts the actual URL from hyperlinked cells. Use it as `=GetHyperlinkURL(A1)` to pull hyperlink addresses for link inventories, validation, or export lists. Includes error handling for non-hyperlinked cells and multiple cell selections.
 
 ## License
 
 This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 You are free to:
+
 - Use, share, and adapt this work
 - Use it at your job
 
 Under these terms:
-- **Attribution** — Credit the original author
-- **NonCommercial** — No selling or commercial products
-- **ShareAlike** — Derivatives must use the same license
+
+- **Attribution:** Credit the original author
+- **NonCommercial:** No selling or commercial products
+- **ShareAlike:** Derivatives must use the same license
