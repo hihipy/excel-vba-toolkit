@@ -5,8 +5,8 @@
 
 **Built with**
 
-[![VBA](https://img.shields.io/badge/VBA-5E5E5E?style=flat&logoColor=white)](https://learn.microsoft.com/office/vba/api/overview/)
 [![Microsoft Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/microsoft-365/excel)
+[![VBA](https://img.shields.io/badge/VBA-5E5E5E?style=flat&logoColor=white)](https://learn.microsoft.com/office/vba/api/overview/)
 
 A collection of Excel VBA macros, organized as .bas code modules so you can reuse them and import them into any Excel workbook.
 
